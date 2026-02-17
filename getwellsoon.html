@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Get Well Soon ❤️</title>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        font-family: Arial, sans-serif;
+        overflow: hidden;
+    }
+
+    .card {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        animation: fadeIn 2s ease-in-out;
+        max-width: 350px;
+    }
+
+    h1 {
+        color: #ff4d6d;
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 18px;
+        color: #555;
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+        background: #ff4d6d;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    button:hover {
+        background: #e63950;
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0; transform: scale(0.8);}
+        to {opacity: 1; transform: scale(1);}
+    }
+
+    .heart {
+        position: absolute;
+        color: #ff4d6d;
+        font-size: 20px;
+        animation: float 5s linear infinite;
+    }
+
+    @keyframes float {
+        from {transform: translateY(100vh);}
+        to {transform: translateY(-10vh);}
+    }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>Get Well Soon ❤️</h1>
+    <p>
+        Hey monica pagal,<br><br>
+        I hope you feel better very soon.<br>
+        Your smile is my happiness 😊<br><br>
+        Take rest and recover fast.<br>
+        I’m always with you 💕
+    </p>
+
+    <button onclick="showMessage()">Click for Surprise 💌</button>
+</div>
+
+<script>
+function showMessage(){
+    alert("I love you so much ❤️ Get well soon baby!");
+}
+
+// floating hearts
+setInterval(() => {
+    const heart = document.createElement("div");
+    heart.innerHTML = "❤️";
+    heart.className = "heart";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 5000);
+}, 300);
+</script>
+
+</body>
+</html>
